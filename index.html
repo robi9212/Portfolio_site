@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <nav>
+        <h2 id="logo">Robinson Pierrnor</h2>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a href="#about-me">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a href="./contact-page.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about-me">
+            <div class="about-me-container">
+                <h2>About Me</h2>
+                <p>
+                    Hey! I'm Robinson, i am new to the world of IT. i am excited to embark on this journey in an ever-evolving career path. While i may not
+                    have extensive professional experience in IT yet, i posses deep facination with technology and a strong desire to learn. I am a quick learner, 
+                    and i thrive in environments where i can learn and grow. My analytic mindset and attention to detail will serve me well in my pursuit to grow 
+                    in the industry.
+                </p>
+                <p>
+                    In my free time i like to play basketball can get pretty competitive. learn new random things that interest me and listen to comedy podcast. 
+                </p>
+            </div>
+            <p>
+                Fun fact! I have been coding for 
+                <span id="time-container">0</span> minutes!
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+                <details class="project">
+                    <summary class="project-title">
+                        <a href="https://github.com/robi9212/VC-Metro"><h3>Skyroute</h3></a>
+                    </summary>
+                    <p class="project-description">Skyroute is a routing tool that uses breadth-first search, depth-first search, and Python dictionaries to accomplish this feat.</p>
+                </details>
+                <details class="project">
+                    <summary class="project-title">
+                        <a href="https://github.com/robi9212/Portfolio-project-dev-database-"><h3>Data Analysis</h3></a>
+                    </summary>
+                    <p class="project-description">Cleaned data and created graphs using Matplotlib to display some analtics.</p>
+                </details>
+                <details class="project">
+                    <summary class="project-title">
+                        <a href="https://github.com/robi9212/guessing-game"><h3>Guessing Game</h3></a>
+                    </summary>
+                    <p class="project-description">Classic hangman guessing game made with python</p>
+                </details>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fas fa-terminal"></i>
+            </div>
+        </section>
+    </main>
+    <footer>
+        'Created October 29th 2024 By R.L.P'
+    </footer>
+</body>
+<script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-17-2022";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / (1000 * 60)
+      );
+    
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>

@@ -1,0 +1,125 @@
+/* Universal Styles */
+
+:root {
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+    --border-radius: 12px;
+    --font-color: #323232;
+}
+
+html {
+    font-family: 'Noto serif';
+    font-size: 16px;
+    background-color: #caf0f8;
+}
+
+body {
+    display: 'flex';
+    flex-direction: column;
+    padding: 0 var(--spacing-3);
+    margin: 0 auto;
+    max-width: 900px;
+    flex-direction: column;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-3);
+    background-color: azure;
+}
+
+.nav-items {
+    display: flex;
+    gap: var(--spacing-2);
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+
+.nav-item {
+    padding-right: 16px;
+    text-decoration: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    transition-duration: 0.5s;
+}
+
+/* About Me */
+.about-me {
+    display: flex;
+}
+
+.about-me-container {
+    line-height: 2;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+details {
+    cursor: pointer;
+}
+
+summary {
+    list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  }
+
+/* Projects */
+#projects {
+    margin-bottom: 3rem;
+} 
+
+.project {
+    display: flex;
+    margin-bottom: var(--spacing-2);
+}
+
+.project-title h3 {
+    display: inline;
+    padding: var(--spacing-1);
+}
+
+/* Skills */
+#skills {
+    margin-bottom: 3rem;
+}
+
+.skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.skills-container > * {
+    font-size: 2em;
+    width: 2em;
+    margin-top: var(--spacing-1);
+}
+
+/* Contacts */
+#contact {
+    margin-bottom: 3rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-me-container {
+        flex-direction: column;
+    }
+}
